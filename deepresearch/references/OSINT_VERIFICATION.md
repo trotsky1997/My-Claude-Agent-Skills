@@ -9,6 +9,23 @@ Guide to verifying user-generated content (UGC), images, videos, and geolocation
 3. **Triangulate**: Cross-check with multiple independent sources
 4. **Document verification path**: Record what was checked, what was found, what remains uncertain
 
+## Recommended Tool: Cursor IDE Browser
+
+**cursor-ide-browser** (MCP server) is highly recommended for OSINT verification work. It enables browser automation directly within Cursor IDE, making verification more efficient and evidence capture more reliable.
+
+**Key Advantages**:
+- **Integrated workflow**: No need to switch between tools
+- **Evidence capture**: Built-in screenshot and snapshot capabilities
+- **Reproducible**: Can document exact verification path
+- **Audit trail**: Timestamps and page states automatically captured
+
+**Use browser automation for**:
+- Reverse image/video search across multiple platforms
+- Geolocation verification using map services
+- Social media account verification
+- Chronolocation using weather/timezone services
+- Evidence capture (screenshots, snapshots) at each step
+
 ## UGC / Social Media Verification
 
 ### Verification Checklist
@@ -43,14 +60,35 @@ For each piece of UGC, verify:
 
 ### Tools & Techniques
 
+**Using Cursor IDE Browser (Recommended)**:
+- **Reverse image search**: Navigate to Google Images, TinEye, Yandex; capture search results as screenshots
+- **Reverse video search**: Navigate to YouTube, InVid; extract frames and search; capture evidence
+- **Social media analysis**: Navigate to platforms; capture account snapshots with timestamps
+- **Multi-platform verification**: Use browser to check same content across platforms
+
+**Traditional Tools** (if browser not available):
 - **Reverse image search**: Google Images, TinEye, Yandex
 - **Reverse video search**: YouTube, InVid, Yandex Video
 - **Social media analysis**: Account history, follower analysis, cross-platform verification
 - **Metadata extraction**: EXIF data, video metadata (use with caution, can be manipulated)
 
+**Best Practice**: Always capture screenshots/snapshots when using browser for verification. This creates an auditable evidence chain.
+
 ## Image Verification
 
 ### Step-by-Step Process
+
+**Using Cursor IDE Browser** (Recommended):
+
+1. **Reverse image search** (navigate to multiple engines):
+   - Navigate to Google Images, upload/search image
+   - Capture search results page as screenshot
+   - Navigate to TinEye, repeat search
+   - Navigate to Yandex (often best for non-English content)
+   - Navigate to Baidu (for Chinese content)
+   - Compare results across platforms, capture comparison screenshots
+
+**Traditional Method** (if browser not available):
 
 1. **Reverse image search** (multiple engines):
    - Google Images
@@ -146,6 +184,19 @@ Look for:
 
 #### Step 3: Compare with Maps/Satellite Imagery
 
+**Using Cursor IDE Browser** (Recommended):
+
+For each candidate:
+- Navigate to Google Maps / Google Earth in browser
+- Use satellite view to compare with image/video
+- **Road patterns**: Match road layout, intersections (capture comparison screenshot)
+- **Buildings**: Match building positions, shapes, relative positions (side-by-side screenshot)
+- **Terrain**: Match elevation, natural features
+- **Perspective**: Match camera angle, field of view
+- Capture all comparison screenshots for evidence chain
+
+**Traditional Method** (if browser not available):
+
 For each candidate:
 - **Road patterns**: Match road layout, intersections
 - **Buildings**: Match building positions, shapes, relative positions
@@ -155,25 +206,33 @@ For each candidate:
 #### Step 4: Output Evidence Chain
 
 - **Match point**: Coordinates or location description
-- **Evidence screenshots**: Side-by-side comparison
+- **Evidence screenshots**: Side-by-side comparison (browser-captured)
 - **Coordinates**: If precise location identified
 - **Exclusion rationale**: Why other candidates were ruled out
 
 ### Tools
 
+**Using Cursor IDE Browser**:
+- **Google Maps / Google Earth**: Navigate in browser, capture comparison screenshots
+- **Bing Maps**: Alternative, sometimes better satellite imagery
+- **OpenStreetMap**: Open-source alternative
+- **Wikimapia**: Community-annotated maps
+- **SunCalc / Shadow Calculator**: Navigate to verify time of day from shadows
+
+**Traditional Tools** (if browser not available):
 - **Google Maps / Google Earth**: Primary tool for comparison
 - **Bing Maps**: Alternative, sometimes better satellite imagery
 - **OpenStreetMap**: Open-source alternative
 - **Wikimapia**: Community-annotated maps
 - **SunCalc / Shadow Calculator**: Verify time of day from shadows
 
-### Example Workflow
+### Example Workflow (Using Browser)
 
 1. Image shows distinctive bridge + mountain range + sign in Arabic
-2. Search for "bridge + mountain + [region with Arabic]" → Candidate: Middle East, specific city
-3. Use Google Earth to find bridges in that city matching the shape
-4. Compare road patterns, building positions around bridge
-5. Match found: Coordinates, evidence screenshots, verification complete
+2. Use browser to search for "bridge + mountain + [region with Arabic]" → Candidate: Middle East, specific city
+3. Navigate to Google Earth in browser, find bridges in that city matching the shape
+4. Compare road patterns, building positions around bridge (capture side-by-side screenshots)
+5. Match found: Coordinates, browser-captured evidence screenshots, verification complete
 
 ## Verification Log Template
 
@@ -193,7 +252,10 @@ For each piece of content verified, maintain:
 | Cross-Reference | TODO (Other sources confirming/contradicting) |
 | Overall Assessment | TODO (Verified/Likely/Uncertain/False) |
 | Remaining Uncertainties | TODO |
-| Evidence Screenshots | TODO (Links to comparison images) |
+| Evidence Screenshots | TODO (Links to browser-captured comparison images) |
+| Browser Evidence | TODO (Screenshots, snapshots, verification path) |
+
+**Note**: When using Cursor IDE Browser, include browser-captured evidence (screenshots, snapshots) in the verification log. This creates a complete, auditable evidence chain.
 
 ## Common Failure Modes
 
