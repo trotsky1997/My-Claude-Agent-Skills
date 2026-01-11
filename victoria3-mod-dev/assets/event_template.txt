@@ -1,0 +1,38 @@
+# Event Template
+# Place in: events/
+# Remember to define namespace at the top of the file
+
+namespace = mymod
+
+mymod.1 = {
+	type = country_event  # Options: country_event, state_event, character_event
+	
+	title = mymod.1.t
+	desc = mymod.1.desc
+	
+	# Optional: trigger conditions
+	# trigger = {
+	# 	has_modifier = required_modifier
+	# }
+	
+	# Optional: mean time to happen (for random events)
+	# mean_time_to_happen = {
+	# 	days = 365
+	# }
+	
+	option = {
+		name = mymod.1.a
+		# Effects for this option
+		# Example:
+		# add_modifier = {
+		# 	name = option_a_modifier
+		# 	days = 90
+		# }
+	}
+	
+	# Add more options as needed
+	# option = {
+	# 	name = mymod.1.b
+	# 	# Effects
+	# }
+}

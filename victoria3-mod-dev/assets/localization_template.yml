@@ -1,0 +1,18 @@
+# Localization Template
+# Place in: localization/<language>/
+# Replace <language> with: english, simp_chinese, etc.
+
+l_english:
+ # Decision localization
+ my_decision:0 "Decision Name"
+ my_decision_desc:0 "Decision description."
+ 
+ # Event localization
+ mymod.1.t:0 "Event Title"
+ mymod.1.desc:0 "Event description text."
+ mymod.1.a:0 "Option A"
+ mymod.1.b:0 "Option B"
+ 
+ # Modifier localization (if needed)
+ my_modifier:0 "Modifier Name"
+ my_modifier_desc:0 "Modifier description."

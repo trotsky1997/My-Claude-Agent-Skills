@@ -1,0 +1,33 @@
+# Decision Template
+# Place in: common/decisions/
+
+my_decision = {
+	is_shown = {
+		# Conditions for decision to appear in decision list
+		is_ai = no  # Player only
+		# Add more conditions here
+	}
+	
+	possible = {
+		# Conditions for decision to be available (not grayed out)
+		# Example: bureaucracy > 100
+	}
+	
+	when_taken = {
+		# Effects when decision is taken
+		# Example:
+		# add_modifier = {
+		# 	name = my_modifier
+		# 	days = 365
+		# }
+	}
+	
+	ai_chance = {
+		base = 0  # 0 = AI never takes, 100 = AI always takes
+		# Optional: conditional AI chance
+		# if = {
+		# 	limit = { bureaucracy > 0 }
+		# 	add = 5
+		# }
+	}
+}
